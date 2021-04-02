@@ -10,6 +10,7 @@ const Deal = () => {
     }, [])
     return (
         <div>
+            
             <h1>Deal</h1>
             <h2>Total Deal: {orders.length}</h2>
             {
