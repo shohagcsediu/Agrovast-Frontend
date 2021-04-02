@@ -16,7 +16,7 @@ const Home = () => {
         <div>
             <Container fluid> 
                 <Row>
-           
+                {orders.length === 0 && <h3>loading product...</h3>}
                     {
                        orders && orders.map(product => <Product product={product}  key={product.id} ></Product>)
                     }
