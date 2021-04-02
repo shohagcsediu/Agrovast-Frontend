@@ -10,7 +10,7 @@ const Admin = () => {
     const productData = {
       name: data.name,
       price: data.price,
-      imageURL: imageURL
+      imageURL: data.imageURL,
     };
     const url = `https://cherry-pie-85193.herokuapp.com/addProduct`;
     
@@ -46,7 +46,7 @@ const Admin = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <input name="name" defaultValue="product name" ref={register({ required: true })} />  
             <input name="price" defaultValue="1" ref={register({ required: true })} />  
-            <input name="imageURL" type="file" onchange={handleImageUpload} />      
+            <input name="imageURL" type="file" onchange={handleImageUpload} ref={register({ required: true })} />      
             <input type="submit" />
             </form>
         </div>
